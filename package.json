@@ -14,7 +14,9 @@
     "Changes.md",
     "LICENSE",
     "index.js",
-    "Readme.md"
+    "Readme.md",
+	"tsconfig.json",
+	"index.d.ts"
   ],
   "engines": {
     "node": ">= 0.8"
