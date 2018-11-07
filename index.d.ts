@@ -1,5 +1,5 @@
 export declare function requireAll(options: RequireOptions | string): Modules;
-interface RequireOptions {
+export interface RequireOptions {
     dirname: string;
     excludeDirs?: RegExp | string;
     filter?: filter;

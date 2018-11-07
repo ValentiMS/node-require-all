@@ -1,3 +1,2 @@
-*.un~
+index.ts
 node_modules/
-package-lock.json
