@@ -4,7 +4,7 @@ var DEFAULT_EXCLUDE_DIR = /^\./;
 var DEFAULT_FILTER = /^([^\.].*)\.js(on)?$/;
 var DEFAULT_RECURSIVE = true;
 
-module.exports = function requireAll(options) {
+exports.requireAll = function(options) {
   var dirname = typeof options === 'string' ? options : options.dirname;
   var excludeDirs = options.excludeDirs === undefined ? DEFAULT_EXCLUDE_DIR : options.excludeDirs;
   var filter = options.filter === undefined ? DEFAULT_FILTER : options.filter;
