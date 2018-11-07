@@ -1,5 +1,5 @@
 var assert = require('assert');
-var requireAll = require('..');
+var requireAll = require('..').requireAll;
 
 var controllers = requireAll({
   dirname: __dirname + '/controllers',
