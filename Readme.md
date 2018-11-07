@@ -9,7 +9,7 @@ An easy way to require all files within a directory.
 ## Usage
 
 ```js
-var controllers = require('require-all')({
+var controllers = require('require-all').requireAll({
   dirname     :  __dirname + '/controllers',
   filter      :  /(.+Controller)\.js$/,
   excludeDirs :  /^\.(git|svn)$/,
@@ -27,7 +27,7 @@ If your objective is to simply require all .js and .json files in a directory
 you can just pass a string to require-all:
 
 ``` js
-var libs = require('require-all')(__dirname + '/lib');
+var libs = require('require-all').requireAll(__dirname + '/lib');
 ```
 
 ### Constructed object usage
@@ -36,7 +36,7 @@ If your directory contains files that all export constructors, you can require
 them all and automatically construct the objects using `resolve`:
 
 ```js
-var controllers = require('require-all')({
+var controllers = require('require-all').requireAll({
   dirname     :  __dirname + '/controllers',
   filter      :  /(.+Controller)\.js$/,
   resolve     : function (Controller) {
@@ -53,7 +53,7 @@ snake_case), then you can use the `map` function. The `map` function is called
 on both file and directory names, as they are added to the resulting object.
 
 ```js
-var controllers = require('require-all')({
+var controllers = require('require-all').requireAll({
   dirname :  __dirname + '/controllers',
   filter  :  /(.+Controller)\.js$/,
   map     : function (name, path) {
@@ -77,7 +77,7 @@ will be the property name used. If no capture group is used, then the entire
 match will be used as the name.
 
 ```js
-var controllers = require('require-all')({
+var controllers = require('require-all').requireAll({
   dirname : __dirname + '/controllers',
   filter  : /^(.+Controller)\.js$/
 });
